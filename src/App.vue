@@ -37,7 +37,7 @@ onMounted(() => {
   <div class="main">
     <div class="main__top">
       <h1>Уважаемый клиент!</h1>
-      <p>Вы можете получить бесплатный кофе, показав этот экран у кофейни.</p>
+      <p>Вы можете получить <span class="underline">бесплатный кофе</span>, показав этот экран у кофейни.</p>
     </div>
     <div class="main__bottom">
       <p>Менеджер: {{ name }} {{ surname }}.</p>
@@ -63,5 +63,9 @@ onMounted(() => {
 
 .main__top {
   margin-bottom: 50px;
+}
+
+.underline {
+  text-decoration: underline;
 }
 </style>
