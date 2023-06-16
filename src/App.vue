@@ -60,7 +60,7 @@ onMounted(() => {
         </div>
         <div class="main__bottom">
             <p>Менеджер: {{ name }} {{ surname }}.</p>
-            <p>Департамент: {{ name }} {{ surname }}.</p>
+            <p>Департамент: {{ department }}.</p>
             <p>{{ formatDate(currentDate) }}</p>
         </div>
     </div>
