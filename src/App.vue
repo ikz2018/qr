@@ -3,6 +3,7 @@ import { onMounted, ref } from "vue";
 
 const name = ref('');
 const surname = ref('');
+const department = ref('');
 const page = ref('greet');
 
 function getGetParameterByKey(key) {
@@ -31,6 +32,7 @@ console.log(formatDate(currentDate));
 onMounted(() => {
   name.value = getGetParameterByKey('name');
   surname.value = getGetParameterByKey('surname');
+  department.value = getGetParameterByKey('department');
 })
 </script>
 
@@ -43,7 +45,7 @@ onMounted(() => {
         <div class="main__top">
             <h3>Уважаемый клиент!</h3>
             <p>Благодарим за выбор дилерского центра Hyundai Premium Al-Farabi!</p>
-            <p>Мы рады угостить Вас бесплатной чашкой кофе!</p>
+            <p>Мы рады угостить Вас <span class="underline">бесплатной чашкой кофе!</span></p>
         </div>
         <div class="main__bottom">
             <button class="button" type="button" @click="page = 'coffee'">Получить бесплатный кофе</button>
@@ -57,8 +59,9 @@ onMounted(() => {
             <p>Вы можете получить <span class="underline">бесплатный кофе</span>, показав этот экран у кофейни.</p>
         </div>
         <div class="main__bottom">
-          <p>Менеджер: {{ name }} {{ surname }}.</p>
-          <p>{{ formatDate(currentDate) }}</p>
+            <p>Менеджер: {{ name }} {{ surname }}.</p>
+            <p>Департамент: {{ name }} {{ surname }}.</p>
+            <p>{{ formatDate(currentDate) }}</p>
         </div>
     </div>
 </template>
@@ -86,6 +89,10 @@ onMounted(() => {
 
 .main__bottom {
     font-size: 20px;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 .button {
