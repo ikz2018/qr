@@ -11,9 +11,6 @@ function getGetParameterByKey(key) {
     return urlParams.get(key);
 }
 
-// eslint-disable-next-line no-console
-console.log(import.meta.env.NODE_ENV);
-
 function formatDate(date) {
     // Добавляем '0' перед числом, если оно однозначное
     function pad(n) {
