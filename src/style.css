@@ -1,20 +1,20 @@
 @font-face {
-    font-family: 'HAKSans';
-    src: url('./assets/HAKSansHeadOffice-Regular.ttf') format('truetype');
+    font-family: "HAKSans";
+    src: url("./assets/HAKSansHeadOffice-Regular.ttf") format("truetype");
     font-weight: 400; /* Нормальный */
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'HAKSans';
-    src: url('./assets/HAKSansHeadOffice-Bold.ttf') format('truetype');
+    font-family: "HAKSans";
+    src: url("./assets/HAKSansHeadOffice-Bold.ttf") format("truetype");
     font-weight: 700; /* Жирный */
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'HAKSans';
-    src: url('./assets/HAKSansHeadOffice-Light.ttf') format('truetype');
+    font-family: "HAKSans";
+    src: url("./assets/HAKSansHeadOffice-Light.ttf") format("truetype");
     font-weight: 300; /* Легкий */
     font-style: normal;
 }

@@ -28,6 +28,25 @@ function formatDate(date) {
 
 const currentDate = new Date();
 
+function sendEventToMetrika() {
+    const data = {
+        name: name.value,
+        surname: surname.value,
+        department: department.value,
+        date: formatDate(currentDate),
+    };
+
+    if (window.ym) {
+        window.ym(94048546, 'reachGoal', 'click_coffee', data);
+    }
+}
+
+function getCoffeeClick() {
+    page.value = 'coffee';
+
+    sendEventToMetrika();
+}
+
 onMounted(() => {
     name.value = getGetParameterByKey('name');
     surname.value = getGetParameterByKey('surname');
@@ -49,7 +68,7 @@ onMounted(() => {
             </p>
         </div>
         <div class="main__bottom">
-            <button class="button" type="button" @click="page = 'coffee'">
+            <button class="button" type="button" @click="getCoffeeClick">
                 Получить бесплатный кофе
             </button>
         </div>
@@ -107,7 +126,7 @@ onMounted(() => {
     cursor: pointer;
     display: inline-block;
     font-family: 'Haas Grot Text R Web', 'Helvetica Neue', Helvetica, Arial,
-    sans-serif;
+        sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
@@ -129,7 +148,7 @@ onMounted(() => {
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: url('./assets/hyundai.jpeg');
+    background-image: url('../assets/hyundai.jpeg');
     background-position: top;
     background-size: 120%; /* Adjust the value to zoom in or out */
     filter: blur(4px);
