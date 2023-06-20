@@ -1,5 +1,17 @@
 import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
+import router from './router';
 
-createApp(App).mount('#app');
+import VueYandexMetrika from 'vue3-yandex-metrika';
+
+export const app = createApp(App);
+
+app.use(router);
+app.use(VueYandexMetrika, {
+    id: 94048546,
+    router: router,
+    env: import.meta.env.NODE_ENV, // не обязательно, но рекомендуется для различения разработки и продакшна
+});
+
+app.mount('#app');
