@@ -11,6 +11,7 @@ app.use(router);
 app.use(VueYandexMetrika, {
     id: 94048546,
     router: router,
+    env: import.meta.env.NODE_ENV, // не обязательно, но рекомендуется для различения разработки и продакшна
 });
 
 app.mount('#app');
