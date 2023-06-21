@@ -33,13 +33,5 @@ module.exports = {
         "vue/no-v-model-argument": "off",
         "import/prefer-default-export": 0,
         "no-magic-numbers": 0,
-        "vue/block-lang": [
-            "error",
-            {
-                script: {
-                    lang: "ts",
-                },
-            },
-        ],
     },
 };

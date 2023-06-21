@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue';
+import VueYandexMetrika from 'vue3-yandex-metrika';
 
 const name = ref('');
 const surname = ref('');
@@ -34,11 +35,12 @@ function sendEventToMetrika() {
         surname: surname.value,
         department: department.value,
         date: formatDate(currentDate),
+        UserID: 12345,
     };
 
-    if (window.ym) {
-        window.ym(94048546, 'reachGoal', 'click_coffee', data);
-    }
+    VueYandexMetrika(94048546, 'setUserParams', {
+        myParam: 'value',
+    });
 }
 
 function getCoffeeClick() {
